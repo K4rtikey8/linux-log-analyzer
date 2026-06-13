@@ -1,0 +1,6 @@
+INFO User logged in
+INFO File uploaded
+WARNING Disk space low
+ERROR Database connection failed
+INFO User logged out
+ERROR API timeout
