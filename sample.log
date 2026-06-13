@@ -4,3 +4,7 @@ WARNING Disk space low
 ERROR Database connection failed
 INFO User logged out
 ERROR API timeout
+ERROR Database failed
+ERROR API timeout
+ERROR Disk failure
+WARNING Disk space low
