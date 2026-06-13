@@ -1,0 +1,8 @@
+
+===== LOG ANALYSIS REPORT =====
+
+INFO Count: 3
+WARNING Count: 2
+ERROR Count: 5
+
+Most Common Log Level: ERROR
