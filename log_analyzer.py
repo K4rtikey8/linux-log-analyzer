@@ -19,6 +19,10 @@
 # print(f"WARNING Count: {warning_count}")
 # print(f"ERROR Count: {error_count}")
 
+
+from datetime import datetime
+import os
+
 info_count = 0
 warning_count = 0
 error_count = 0
@@ -43,6 +47,10 @@ counts = {
 
 most_common = max(counts, key=counts.get)
 
+os.makedirs("reports", exist_ok=True)
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+filename = f"reports/report_{timestamp}.txt"
+
 print("===== LOG ANALYSIS REPORT =====")
 print(f"INFO Count: {info_count}")
 print(f"WARNING Count: {warning_count}")
@@ -58,10 +66,10 @@ ERROR Count: {error_count}
 Most Common Log Level: {most_common}
 """
 
-with open("log_report.txt", "w") as file:
+with open(filename, "w") as file:
     file.write(report)
 
-print("Report saved to log_report.txt")
+print(f"Report saved to {filename}")
 
-with open("log_report.txt", "w") as file:
+with open(filename, "w") as file:
     file.write(report)
