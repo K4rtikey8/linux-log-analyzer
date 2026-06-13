@@ -19,7 +19,7 @@
 # print(f"WARNING Count: {warning_count}")
 # print(f"ERROR Count: {error_count}")
 
-
+import sys
 from datetime import datetime
 import os
 
@@ -65,6 +65,15 @@ ERROR Count: {error_count}
 
 Most Common Log Level: {most_common}
 """
+search_level = sys.argv[1]
+
+print(f"\nShowing all {search_level} logs:\n")
+
+with open("sample.log", "r") as file:
+    for line in file:
+        if search_level in line:
+            print(line.strip())
+
 
 with open(filename, "w") as file:
     file.write(report)
